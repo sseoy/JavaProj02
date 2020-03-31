@@ -16,20 +16,13 @@ public class GameMain {
 		{"4","5","6"},
 		{"7","8","X"}
 	};
-	
-	
 
-	public GameMain() {
-		
-	}
-	
-
-	//x추적해서 섞기
+	//X추적해서 셔플
 	public void shuffle(int num) {
 		int randomNum=0;
 		int col=2, row=2;//사용자 추적
 		for(int i = 0; i<=num; i++ ) {
-			//1~4까지 나오게
+			//1~4까지만  나오게
 			String temp;
 			randomNum = ((int)(Math.random()*100)%5)+1;
 			
@@ -40,8 +33,6 @@ public class GameMain {
 					gameArr[col][row] = gameArr[col][row-1];
 					gameArr[col][row-1]=temp;
 					row--;
-					
-					
 				}
 				break;
 			case GameInterface.DOWN:
@@ -155,8 +146,7 @@ public class GameMain {
 				System.out.println();
 			}
 			
-		}
-		System.out.println("끝이다 씨발3");
+		}//end of while
 	}
 	
 	
@@ -180,18 +170,14 @@ public class GameMain {
 		System.out.println("이렇게 맞춰주세요~");
 		gameMain.gameAnswer();
 		System.out.println("==========");
-		gameMain.shuffle(3);
+		gameMain.shuffle(1);
 		System.out.println("==========");
 		
 		System.out.println("[이동] a:Left d:Right w:Up, s:Down");
 		System.out.println("[종료] x:Exit");
 		
 		gameMain.found();
-		
-		
-		
-		
-		
+		System.out.println("우왕 맞췄어여!!★★");
 	}
 	
 		
