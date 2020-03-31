@@ -28,11 +28,13 @@ public class AccountManager {
 	//생성자
 	public AccountManager() {
 		try {
-			ObjectInputStream in = new ObjectInputStream(new FileInputStream("src/ver04/AccountCustomer.obj"));
+			ObjectInputStream in = 
+					new ObjectInputStream(new FileInputStream("src/ver04/AccountCustomer.obj"));
 			
 			customer = (HashSet<Account>)in.readObject();
 		}
 		catch (Exception e) {
+			System.out.println("파일을 찾을수 없습니다.");
 			customer = new HashSet<Account>();
 	    }
 	}
