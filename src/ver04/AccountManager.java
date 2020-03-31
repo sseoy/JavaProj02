@@ -281,6 +281,7 @@ public class AccountManager {
 		for(Account info : customer) {
 				
 			info.showAccount();
+			System.out.println("----------------");
 		}
 		System.out.println("전체계좌정보 출력이 완료되었습니다.");
 	}
