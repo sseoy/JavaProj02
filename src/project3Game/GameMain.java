@@ -17,6 +17,18 @@ public class GameMain {
 		{"7","8","X"}
 	};
 
+	//퍼즐 완성한 모습
+	public void gameAnswer() {
+			
+		for(int i=0;i<answerArr.length;i++) {
+			for(int j=0;j<answerArr[i].length;j++) {
+				System.out.print(answerArr[i][j]+" ");
+					
+			}
+			System.out.println();
+		}
+			
+	}
 	//X추적해서 셔플
 	public void shuffle(int num) {
 		int randomNum=0;
@@ -92,9 +104,14 @@ public class GameMain {
 		while(!(Objects.deepEquals(gameArr, answerArr))){
 			
 			System.out.print("키를 입력해주세요>>");
+			
 			String user = scan.nextLine();
 			String temp;
 			
+			if(user.equals("x")) {
+				//System.out.println("종료되었습니다");
+				break;
+			}
 			switch (user) {
 			//위
 			case "w":
@@ -147,21 +164,11 @@ public class GameMain {
 			}
 			
 		}//end of while
+		//System.out.println("우왕 맞췄어여!!★★");
 	}
 	
 	
-	//퍼즐 완성한 모습
-	public void gameAnswer() {
-		
-		for(int i=0;i<answerArr.length;i++) {
-			for(int j=0;j<answerArr[i].length;j++) {
-				System.out.print(answerArr[i][j]+" ");
-				
-			}
-			System.out.println();
-		}
-		
-	}
+	
 	
 	public static void main(String[] args) {
 	    
@@ -170,7 +177,7 @@ public class GameMain {
 		System.out.println("이렇게 맞춰주세요~");
 		gameMain.gameAnswer();
 		System.out.println("==========");
-		gameMain.shuffle(1);
+		gameMain.shuffle(3);
 		System.out.println("==========");
 		
 		System.out.println("[이동] a:Left d:Right w:Up, s:Down");
