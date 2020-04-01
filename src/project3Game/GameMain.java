@@ -177,7 +177,7 @@ public class GameMain {
 		System.out.println("이렇게 맞춰주세요~");
 		gameMain.gameAnswer();
 		System.out.println("==========");
-		gameMain.shuffle(3);
+		gameMain.shuffle(5);
 		System.out.println("==========");
 		
 		System.out.println("[이동] a:Left d:Right w:Up, s:Down");
