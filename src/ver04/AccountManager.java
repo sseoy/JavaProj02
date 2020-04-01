@@ -170,7 +170,6 @@ public class AccountManager {
 		}	
 	}
 	
-		
 	//입금
 	public void depositMoney() {
 		try {
@@ -197,14 +196,12 @@ public class AccountManager {
 				if(inAccountNumber.endsWith(account.accountNumber)) {
 					depositFlag = true;
 					account.balanceDeposit(deposit);
-					
 				}
 			}
 			System.out.println("입금이 완료되었습니다.");
 			
 		}catch(InputMismatchException e) {
 			System.out.println("문자형태로 입력하면 안되요.");
-			
 		}
 	}
 		
@@ -226,7 +223,7 @@ public class AccountManager {
 				System.out.println("음수를 입력할수 없습니다!");
 				withdrawMoney();
 				
-			}else if(!(withdraw%1000 == 0)) {
+			}else if(!(withdraw % 1000 == 0)) {
 				System.out.println("입금액은 1000원 단위로 가능합니당~");
 				withdrawMoney();
 			}
@@ -246,7 +243,6 @@ public class AccountManager {
 						System.out.println("yes : 금액전체 출금처리, no : 출금요청취소");
 						String choice03 = scan.nextLine();
 						
-						
 						if(choice03.equals("yes")) {
 							
 							account.balance = 0;
@@ -263,8 +259,6 @@ public class AccountManager {
 						
 						System.out.println("출금이 완료되었습니다.");
 					}
-					
-					
 				}
 			}
 			
