@@ -10,7 +10,7 @@ public class Account {
 	int balance;
 	
 	
-	//배열
+	//배열   
 	private Account [] accountCustomer;
 	private int numOfaccount;
 	
